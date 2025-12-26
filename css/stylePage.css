@@ -1,0 +1,321 @@
+:root
+{
+    --mainBackground:#006C74;
+    --textColorWithe:#FFFF;
+    --textHeader:#434451;
+    --linkColor:blue;
+}
+
+*
+{
+    box-sizing:border-box;
+    margin: 0;
+    padding:0
+}
+
+body
+{
+    background-color: #EDF2F7;
+    font-family: 'Cairo', sans-serif ,'Oswald', sans-serif;
+    direction:rtl;
+}
+
+ul
+{
+    list-style:none
+}
+/*------------------------------------------------------------- This is Page Home --------------------------------*/
+
+/*Start navbar*/
+
+nav
+{
+    background-color: var(--mainBackground);
+    color:var(--textColorWithe);
+    padding:0 !important;
+    position: fixed !important;
+    z-index: 99999;
+    width: 100%;
+}
+
+.navbar-light .navbar-nav .nav-link
+,.navbar-light .navbar-brand
+{
+    color: var(--textColorWithe);
+    transition: all .5s ease-in-out;
+}
+
+.navbar-light .navbar-nav .nav-link:hover
+,.navbar-light .navbar-brand:hover
+{
+    color:#D2AB37
+}
+/*End navbar*/
+
+/*statrt carousel*/
+
+.carousel-inner
+{
+    height: 100vh
+}
+
+/*End carousel*/
+
+/*Start section-one*/
+
+.section-one
+{
+    
+    padding: 80px 0;
+    color: var(--textColorWithe);
+    background-color: #0a959b;
+    box-shadow: 0px -3px 14px 8px var(--textHeader)
+}
+
+.section-one .content-me h2
+{
+    margin: 30px 0;
+}
+
+.section-one .content-me p
+{
+    font-size: 1.5vw;
+}
+
+/*End section-one*/
+
+/*Start main-side*/
+
+.main-side
+{
+    padding: 80px 0;
+}
+
+.main-side aside
+{
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #b9b9b9;
+    height: 520px;
+}
+
+.main-side aside h2
+{
+    position: relative;
+    color:var(--textHeader);
+    font-size: 25px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #45B09E;
+    padding-bottom: 10px;
+}
+
+.main-side aside h2 i
+{
+    position: absolute;
+    left: 0;
+}
+
+.main-side aside ul li
+{
+    margin-top: 20px;
+    position: relative;
+}
+
+.main-side aside ul li a
+{
+    color:var(--textHeader)
+}
+
+.main-side aside ul li a i
+{
+    position: absolute;
+    left: 0;
+    color:#45B09E
+}
+
+.main-side .content-my-side h2
+{
+    background: #fff;
+    border-radius: 4px;
+    margin-bottom: 40px;
+    border: 1px solid #dadde1;
+    border-right-width: 6px;
+    border-right-color: var(--textHeader);
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    position: relative;
+    font-size: 25px;
+    padding: 20px;
+    color:#45B09E
+}
+
+.main-side .content-my-side h2 i
+{
+    position: absolute;
+    left: 20px;
+}
+
+.main-side .content-my-side .box
+{
+    padding: 15px;
+    padding-top: 30px;
+    background: #fff;
+    border-radius: 4px;
+    text-align: center;
+    margin-bottom: 30px;
+    border: 1px solid #dadde1!important;
+    position: relative;
+    transform: translateY(0);
+    transition: all .2s cubic-bezier(.4,0,.2,1);
+}
+
+.main-side .content-my-side .box .stars
+{
+    color:#FFB400;
+    margin-bottom: 10px;
+}
+
+.main-side .content-my-side .box .img img
+{
+    border-radius: 10px;
+    border:1px solid #b9b9b9;
+    padding: 4px;
+    height: 300px;
+}
+
+.main-side .content-my-side .box h3
+{
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+
+
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Montagu+Slab:wght@500&family=Montserrat:wght@400;500;600&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-height: 3.5rem;
+
+  /*========== Colors ==========*/
+  
+  --first-color: hsl(230, 62%, 56%);
+  --title-color: hsl(230, 70%, 16%);
+  --text-color: hsl(230, 16%, 45%);
+  --border-color: hsl(230, 50%, 90%);
+  --white-color: hsl(0, 0%, 100%);
+  --body-color: hsl(230, 100%, 96%);
+  --container-color: hsl(230, 100%, 97%);
+
+  /*========== Font and typography ==========*/
+
+  --body-font: "Montserrat", sans-serif;
+  --second-font: "Montagu Slab", serif;
+  --biggest-font-size: 2rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+
+  /*========== Font weight ==========*/
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body,
+input,
+button {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+
+body {
+  background-color: var(--body-color);
+  color: var(--text-color);
+  transition: background-color .4s;
+}
+
+input,
+button {
+  border: none;
+  outline: none;
+}
+
+h1, h2, h3, h4 {
+  color: var(--title-color);
+  font-family: var(--second-font);
+  font-weight: var(--font-medium);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  max-width: 1220px;
+  margin-inline: 1.5rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.section {
+  padding-block: 5rem 1rem;
+}
+
+.section__title {
+  text-align: center;
+  font-size: var(--h1-font-size);
+  font-family: var(--second-font);
+  margin-bottom: 2rem;
+}
+
+.main {
+  overflow: hidden; 
+}
+
+
+
+/*Start footer*/
+
+footer
+{
+    background-color: var(--mainBackground);
+    padding: 20px;
+    color: var(--textColorWithe);
+}
+
+/*End footer*/

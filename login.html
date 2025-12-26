@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل الدخول</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Cairo|Oswald|Reem+Kufi&display=swap" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>
+    <!-- Normalize -->
+    <link type="text/css" rel="stylesheet" href="css/normalize.css"/>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- Custom Styles -->
+    <link type="text/css" rel="stylesheet" href="css/login.css"/>
+</head>
+<body>
+    <div class="login-container">
+        <h2>تسجيل الدخول</h2>
+        <form action="index.html" method="get" onsubmit="return validateForm()">
+            <input type="email" id="email" name="email" placeholder="البريد الإلكتروني @gmail.com" required>
+            <input type="password" id="password" name="password" placeholder="كلمة المرور (8 أحرف على الأقل)" required>
+            <button type="submit">تسجيل الدخول</button>
+        </form>
+        <a href="#">هل نسيت كلمة المرور؟</a>
+    </div>
+
+    <script>
+        function validateForm() {
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            // Check if email ends with '@gmail.com'
+            const emailRegex = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
+            if (!emailRegex.test(email)) {
+                alert('يرجى إدخال بريد إلكتروني صالح ينتهي بـ @gmail.com');
+                return false;
+            }
+
+            // Check if password has at least 8 characters
+            if (password.length < 8) {
+                alert('يرجى إدخال كلمة مرور تحتوي على 8 أحرف على الأقل');
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</body>
+</html>
